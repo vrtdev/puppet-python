@@ -20,6 +20,6 @@ describe 'requirements' do
 
     apply_manifest(pp, catch_failures: true)
 
-    expect(shell('/bin/pip3 list --no-index | grep requests'.stdout).to match(%r{requests: \(\d+.\d+.\d+\)}))
+    expect(shell('/bin/pip3 list --no-index | grep requests').stdout).to match(%r{requests: \(\d+.\d+.\d+\)})
   end
 end
