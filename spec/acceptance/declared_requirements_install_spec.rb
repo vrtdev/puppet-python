@@ -19,6 +19,6 @@ describe 'requirements' do
 
     apply_manifest(pp, catch_failures: true)
 
-    expect(shell('/tmp/pyvenv/bin/pip3 list --no-index | grep requests').stdout).to match(%r{requests +\(\d+.\d+.\d+\)})
+    expect(shell('/tmp/pyvenv/bin/pip3 list --no-index | grep requests').stdout).to match(%r{requests +\d+.\d+.\d+})
   end
 end
