@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'spec_helper_acceptance'
 
 describe 'requirements' do
   it 'checks declared requirements file is installed to venv' do
