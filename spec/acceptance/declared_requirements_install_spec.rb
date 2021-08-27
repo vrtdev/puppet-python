@@ -8,7 +8,7 @@ describe 'requirements' do
       content => 'requests',
     }
 
-    python::venv { '/tmp/pyvenv':
+    python::pyvenv { '/tmp/pyvenv':
       ensure  => 'present',
       version => $facts['python_version'],
     }
