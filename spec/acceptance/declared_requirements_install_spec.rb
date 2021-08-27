@@ -4,13 +4,13 @@ describe 'requirements' do
   it 'checks declared requirements file is installed to venv' do
     pp = <<-EOS
     file {'/tmp/requirements.txt':
-      ensure => 'present',
-      content => 'requests'
+      ensure  => 'present',
+      content => 'requests',
     }
 
     python::venv {'/tmp/pyvenv':
-      ensure => 'present',
-      version => ${facts['python_version']}
+      ensure  => 'present',
+      version => ${facts['python_version']},
     }
 
     python::requirements {'/tmp/requirements.txt':
