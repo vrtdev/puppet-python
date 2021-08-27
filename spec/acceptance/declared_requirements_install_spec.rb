@@ -10,7 +10,6 @@ describe 'requirements' do
 
     python::pyvenv { '/tmp/pyvenv':
       ensure  => 'present',
-      version => $facts['python_version'],
     }
 
     python::requirements { '/tmp/requirements.txt':
