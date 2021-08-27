@@ -3,7 +3,7 @@ require 'spec_helper_acceptance'
 describe 'requirements' do
   it 'checks declared requirements file is installed to venv' do
     pp = <<-EOS
-    class {'/tmp/requirements.txt':
+    file {'/tmp/requirements.txt':
       ensure => 'present',
       content => 'requests'
     }
